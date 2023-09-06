@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="circle_button">60dp</dimen>
+    <dimen name="button_top_margin">60dp</dimen>
+    <dimen name="button_left_margin">60dp</dimen>
+</resources>
