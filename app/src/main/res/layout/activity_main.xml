@@ -67,29 +67,13 @@
 
     <EditText
         android:id="@+id/value1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/md_theme_light_tertiaryContainer"
-        android:ems="10"
-        android:hint="value one"
-        android:inputType="text"
-        android:textColorHint="@color/md_theme_light_tertiary"
+        style="@style/valueInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/value2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="@dimen/button_top_margin"
-        android:backgroundTint="@color/md_theme_light_tertiaryContainer"
-        android:ems="10"
-        android:hint="value 2"
-        android:inputType="text"
-        android:textColorHint="@color/md_theme_light_tertiary"
+        style="@style/valueInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divide" />
 </androidx.constraintlayout.widget.ConstraintLayout>

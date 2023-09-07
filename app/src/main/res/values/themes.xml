@@ -28,4 +28,19 @@
         <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
         <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
     </style>
+
+    <style name="valueInput" parent="Widget.Material3.TextInputEditText.FilledBox.Dense">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">100dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:background">@color/md_theme_light_tertiaryContainer</item>
+        <item name="android:ems">10</item>
+        <item name="android:hint">value one</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textColor">@color/md_theme_light_secondary</item>
+        <item name="android:textColorHint">@color/md_theme_light_tertiary</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
 </resources>
