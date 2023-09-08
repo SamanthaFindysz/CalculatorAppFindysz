@@ -21,18 +21,38 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculate(View v){
         //first we make a reference to the EditText by locating it with its id
-        EditText value1ET = findViewById(R.id.value1);
-        //use that reference to extract the text and save it into a String var
-        //getText returns an Editable, not a String. So we call toString so we can
-        //save it in a string variable.
-        String value1 = value1ET.getText().toString();
+        TextView outputTv = findViewById(R.id.output)
+        try {
+            EditText value1ET = findViewById(R.id.value1);
+            int value1 = Integer.parseInt(value1ET.getText().toString());
 
-        EditText value2ET = findViewById(R.id.value2);
-        String value2 = value2ET.getText().toString(); //we will learn how to make numeric later
+            EditText value2ET = findViewById(R.id.value2);
+            int value2 = Integer.parseInt(value2ET.getText().toString());
 
-        String fullText = value1 + ", " + value2;
-        // first param is a searchable tag, the second is what you are logging
-        Log.i("sammie", "First screen: " + fullText);
+            String fullText = value1 + ", " + operator + ", " + value2 ;
+            // first param is a searchable tag, the second is what you are logging
+            Log.i("sammie", "First screen: " + fullText);
+            ;
+
+            //this try code checks to see if the values can be computed.
+            //I had to use the resource below to remind me of the syntax.
+            //https://www.w3schools.com/java/java_try_catch.asp
+            if(operator.equals("add")){
+                Log.i("sammie", "" + (value1 + value2));
+                outputTv.setText("" + (value1 + value2));
+            }
+            else if(operator.equals("subtract")){
+                outputTv.setText("" + (value1 - value2));
+            }
+            else if(operator.equals("multiply")){
+                outputTv.setText("" + (value1 * value2));
+            }
+            else{
+                outputTv.setText("" + ((double) value1 / value2));
+            }
+        } catch (Exception e){
+
+        }
 
         /*
         To switch screens we need to create an Intent, tell it where to go
@@ -67,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             operator = "multiply";
         }
         else{
-            Log.i("sammie", "divide")
+            Log.i("sammie", "divide");
             operator = "divide";
         }
     }

@@ -15,6 +15,7 @@
         android:backgroundTint="@color/md_theme_light_primary"
         android:text="/"
         android:textColor="@color/md_theme_light_onPrimary"
+        android:onClick="defineOperator"
         app:layout_constraintStart_toEndOf="@+id/multiply"
         app:layout_constraintTop_toBottomOf="@+id/subtract" />
 
@@ -27,6 +28,7 @@
         android:backgroundTint="@color/md_theme_light_primary"
         android:text="*"
         android:textColor="@color/md_theme_light_onPrimary"
+        android:onClick="defineOperator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add" />
 
@@ -39,6 +41,7 @@
         android:backgroundTint="@color/md_theme_light_primary"
         android:text="-"
         android:textColor="@color/md_theme_light_onPrimary"
+        android:onClick="defineOperator"
         app:layout_constraintStart_toEndOf="@+id/add"
         app:layout_constraintTop_toBottomOf="@+id/value1" />
 
@@ -51,6 +54,7 @@
         android:backgroundTint="@color/md_theme_light_primary"
         android:text="+"
         android:textColor="@color/md_theme_light_onPrimary"
+        android:onClick="defineOperator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/value1" />
 
@@ -62,6 +66,7 @@
         android:layout_marginTop="@dimen/button_top_margin"
         android:text="enter"
         android:textColor="@color/md_theme_light_onPrimary"
+        android:onClick="calculate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/value2" />
 
@@ -76,4 +81,21 @@
         style="@style/valueInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+
+    <TextView
+        android:id="@+id/output"
+        android:gravity="center"
+        android:hint="result"
+        android:textColor="@color/md_theme_light_primary"
+        android:textColorHint="@color/md_theme_light_inversePrimary"
+        android:textSize="24sp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="@dimen/button_top_margin" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
