@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CalculatorAppFindysz</string>
+    <string name="v1">value one</string>
+    <string name="v2">value two</string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="enter_button">enter</string>
+    <string name="output">result</string>
 </resources>

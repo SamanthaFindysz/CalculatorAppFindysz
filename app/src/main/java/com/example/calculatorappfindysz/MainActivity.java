@@ -21,9 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculate(View v){
         //first we make a reference to the EditText by locating it with its id
-        TextView outputTv = findViewById(R.id.output)
+        TextView outputTv = findViewById(R.id.output);
         try {
             EditText value1ET = findViewById(R.id.value1);
+            //converts the string value of the input to a double
+            //https://developer.android.com/reference/java/lang/Double
             int value1 = Integer.parseInt(value1ET.getText().toString());
 
             EditText value2ET = findViewById(R.id.value2);
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             String fullText = value1 + ", " + operator + ", " + value2 ;
             // first param is a searchable tag, the second is what you are logging
             Log.i("sammie", "First screen: " + fullText);
-            ;
+
 
             //this try code checks to see if the values can be computed.
             //I had to use the resource below to remind me of the syntax.
@@ -48,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 outputTv.setText("" + (value1 * value2));
             }
             else{
-                outputTv.setText("" + ((double) value1 / value2));
+                outputTv.setText("" + (value1 / value2));
             }
         } catch (Exception e){
-
+            outputTv.setText("error");
         }
 
         /*

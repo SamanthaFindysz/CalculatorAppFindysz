@@ -10,12 +10,13 @@
         android:id="@+id/divide"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginLeft="@dimen/button_left_margin"
+        android:layout_marginStart="@dimen/button_left_margin"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
-        android:text="/"
-        android:textColor="@color/md_theme_light_onPrimary"
         android:onClick="defineOperator"
+        android:text="@string/divide"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
         app:layout_constraintStart_toEndOf="@+id/multiply"
         app:layout_constraintTop_toBottomOf="@+id/subtract" />
 
@@ -23,12 +24,13 @@
         android:id="@+id/multiply"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginLeft="110dp"
+        android:layout_marginStart="@dimen/operation_button_margin_start"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
-        android:text="*"
-        android:textColor="@color/md_theme_light_onPrimary"
         android:onClick="defineOperator"
+        android:text="@string/multiply"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add" />
 
@@ -36,12 +38,13 @@
         android:id="@+id/subtract"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginLeft="@dimen/button_left_margin"
+        android:layout_marginStart="@dimen/button_left_margin"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
-        android:text="-"
-        android:textColor="@color/md_theme_light_onPrimary"
         android:onClick="defineOperator"
+        android:text="@string/subtract"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
         app:layout_constraintStart_toEndOf="@+id/add"
         app:layout_constraintTop_toBottomOf="@+id/value1" />
 
@@ -49,53 +52,67 @@
         android:id="@+id/add"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginLeft="110dp"
+        android:layout_marginStart="@dimen/operation_button_margin_start"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
-        android:text="+"
-        android:textColor="@color/md_theme_light_onPrimary"
         android:onClick="defineOperator"
+        android:text="@string/add"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/value1" />
+
 
     <Button
         android:id="@+id/enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
         android:layout_marginTop="@dimen/button_top_margin"
-        android:text="enter"
-        android:textColor="@color/md_theme_light_onPrimary"
         android:onClick="calculate"
+        android:text="@string/enter_button"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/value2" />
 
     <EditText
         android:id="@+id/value1"
         style="@style/valueInput"
+        android:layout_marginTop="68dp"
+        android:hint="@string/v1"
+        android:textSize="@dimen/text_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/value2"
         style="@style/valueInput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divide" />
+        android:layout_marginTop="@dimen/input_top_margin"
+        android:hint="@string/v2"
+        android:textSize="@dimen/text_input"
+        app:layout_constraintTop_toBottomOf="@+id/divide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
     <TextView
         android:id="@+id/output"
-        android:gravity="center"
-        android:hint="result"
-        android:textColor="@color/md_theme_light_primary"
-        android:textColorHint="@color/md_theme_light_inversePrimary"
-        android:textSize="24sp"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/result_left_margin"
+        android:layout_marginTop="@dimen/button_top_margin"
+        android:gravity="center"
+        android:hint="@string/output"
+        android:textColor="@color/md_theme_light_primary"
+        android:textColorHint="@color/md_theme_light_tertiary"
+        android:textSize="@dimen/text_output"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="@dimen/button_top_margin" />
+        app:layout_constraintTop_toBottomOf="@+id/enter" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
