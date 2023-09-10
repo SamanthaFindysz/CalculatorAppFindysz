@@ -7,6 +7,9 @@
     <string name="subtract">-</string>
     <string name="multiply">*</string>
     <string name="divide">/</string>
+    <string name="exponent">^</string>
+    <string name="log">log</string>
     <string name="enter_button">enter</string>
     <string name="output">result</string>
+    <string name="clear_button">clear</string>
 </resources>

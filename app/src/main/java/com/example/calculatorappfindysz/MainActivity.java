@@ -44,35 +44,23 @@ public class MainActivity extends AppCompatActivity {
                 outputTv.setText("" + (value1 + value2));
             }
             else if(operator.equals("subtract")){
-                outputTv.setText("" + (value1 - value2));
+                outputTv.setText("" + (value1 -value2));
             }
             else if(operator.equals("multiply")){
                 outputTv.setText("" + (value1 * value2));
             }
-            else{
+            else if(operator.equals("divide")){
                 outputTv.setText("" + (value1 / value2));
+            }
+            else if(operator.equals("exponent")){
+                outputTv.setText("" + (Math.pow(value1, value2)));
+            }
+            else{
+                outputTv.setText("" + ((Math.log(value1) / Math.log(value2))));
             }
         } catch (Exception e){
             outputTv.setText("error");
         }
-
-        /*
-        To switch screens we need to create an Intent, tell it where to go
-        Put data in the intent (optional)
-        startActivity to actually launch the intent (go to other screen)
-
-        (Make the package, address it, stuff it, mail it)
-         */
-
-        // coming from this screen, going to ShowInfoActivity
-        //Intent intent = new Intent(this, ShowInfoActivity.class);
-
-        //optional - you don't have to put anything int the intent, will switch screens only
-        //intent.putExtra("NAME", name);
-        //intent.putExtra("AGE", age);
-        //intent.putExtra("HOBBY", hobby);
-        // launch the new screen
-        //startActivity(intent);
     }
 
     public void defineOperator(View v){
@@ -88,9 +76,30 @@ public class MainActivity extends AppCompatActivity {
             Log.i("sammie", "multiply");
             operator = "multiply";
         }
-        else{
+        else if(v.getId() == R.id.divide){
             Log.i("sammie", "divide");
             operator = "divide";
         }
+        else if(v.getId() == R.id.exponent){
+            Log.i("sammie", "exponent");
+            operator = "exponent";
+        }
+        else {
+            Log.i("sammie", "log");
+            operator = "log";
+        }
+    }
+
+    public void clear(View v){
+        operator = "none";
+
+        EditText value1ET = findViewById(R.id.value1);
+        value1ET.setText("");
+        EditText value2ET = findViewById(R.id.value2);
+        value2ET.setText("");
+
+        TextView outputTv = findViewById(R.id.output);
+        outputTv.setText("");
+
     }
 }

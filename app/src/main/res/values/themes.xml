@@ -32,8 +32,6 @@
     <style name="valueInput" parent="Widget.Material3.TextInputEditText.FilledBox.Dense">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">100dp</item>
-        <item name="android:layout_marginTop">50dp</item>
         <item name="android:background">@color/md_theme_light_tertiaryContainer</item>
         <item name="android:ems">10</item>
         <item name="android:inputType">number</item>

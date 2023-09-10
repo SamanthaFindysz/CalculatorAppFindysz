@@ -7,10 +7,52 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/log"
+        android:layout_width="@dimen/circle_button"
+        android:layout_height="@dimen/circle_button"
+        android:layout_marginTop="@dimen/button_top_margin"
+        android:backgroundTint="@color/md_theme_light_primary"
+        android:onClick="defineOperator"
+        android:text="@string/log"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divide"
+        app:layout_constraintTop_toBottomOf="@+id/exponent"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+    <Button
+        android:id="@+id/exponent"
+        android:layout_width="@dimen/circle_button"
+        android:layout_height="@dimen/circle_button"
+        android:layout_marginTop="@dimen/button_top_margin"
+        android:backgroundTint="@color/md_theme_light_primary"
+        android:onClick="defineOperator"
+        android:text="@string/exponent"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subtract"
+        app:layout_constraintTop_toBottomOf="@+id/value1" />
+
+    <Button
+        android:id="@+id/enter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_top_margin"
+        android:onClick="clear"
+        android:text="@string/clear_button"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textSize="@dimen/text_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output" />
+
+    <Button
         android:id="@+id/divide"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginStart="@dimen/button_left_margin"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -18,13 +60,14 @@
         android:textColor="@color/md_theme_light_onPrimary"
         android:textSize="@dimen/text_input"
         app:layout_constraintStart_toEndOf="@+id/multiply"
-        app:layout_constraintTop_toBottomOf="@+id/subtract" />
+        app:layout_constraintTop_toBottomOf="@+id/subtract"
+        app:layout_constraintEnd_toStartOf="@id/log"
+        app:layout_constraintHorizontal_bias="0.2"/>
 
     <Button
         android:id="@+id/multiply"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginStart="@dimen/operation_button_margin_start"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -32,13 +75,14 @@
         android:textColor="@color/md_theme_light_onPrimary"
         android:textSize="@dimen/text_input"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add" />
+        app:layout_constraintTop_toBottomOf="@+id/add"
+        app:layout_constraintEnd_toStartOf="@id/divide"
+        app:layout_constraintHorizontal_bias="0.2"/>
 
     <Button
         android:id="@+id/subtract"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginStart="@dimen/button_left_margin"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -46,13 +90,14 @@
         android:textColor="@color/md_theme_light_onPrimary"
         android:textSize="@dimen/text_input"
         app:layout_constraintStart_toEndOf="@+id/add"
-        app:layout_constraintTop_toBottomOf="@+id/value1" />
+        app:layout_constraintTop_toBottomOf="@+id/value1"
+        app:layout_constraintEnd_toStartOf="@id/exponent"
+        app:layout_constraintHorizontal_bias="0.2"/>
 
     <Button
         android:id="@+id/add"
         android:layout_width="@dimen/circle_button"
         android:layout_height="@dimen/circle_button"
-        android:layout_marginStart="@dimen/operation_button_margin_start"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -60,7 +105,9 @@
         android:textColor="@color/md_theme_light_onPrimary"
         android:textSize="@dimen/text_input"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/value1" />
+        app:layout_constraintTop_toBottomOf="@+id/value1"
+        app:layout_constraintEnd_toStartOf="@id/subtract"
+        app:layout_constraintHorizontal_bias="0.2"/>
 
 
     <Button
@@ -80,11 +127,11 @@
     <EditText
         android:id="@+id/value1"
         style="@style/valueInput"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="@dimen/input_top_margin"
         android:hint="@string/v1"
         android:textSize="@dimen/text_input"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,13 +151,14 @@
         android:id="@+id/output"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/result_left_margin"
         android:layout_marginTop="@dimen/button_top_margin"
         android:gravity="center"
         android:hint="@string/output"
         android:textColor="@color/md_theme_light_primary"
         android:textColorHint="@color/md_theme_light_tertiary"
         android:textSize="@dimen/text_output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter" />
 
