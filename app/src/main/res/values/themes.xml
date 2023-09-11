@@ -38,6 +38,13 @@
         <item name="android:textColor">@color/md_theme_light_secondary</item>
         <item name="android:textColorHint">@color/md_theme_light_tertiary</item>
         <item name="android:gravity">center_horizontal</item>
+        <!--These following two lines of code make the edittext interactive (although it already was),
+            or allowing them to "gain focus." (Chat GPT)-->
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <!--The line of code below allows the input text to receive a "done" action to be
+            editable. (Chat GPT)-->
+        <item name="android:imeOptions">actionDone</item>
     </style>
 
 </resources>
