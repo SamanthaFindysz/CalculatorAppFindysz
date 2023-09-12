@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/log"
-        android:layout_width="@dimen/circle_button"
-        android:layout_height="@dimen/circle_button"
+        android:layout_width="@dimen/circle_button_padding"
+        android:layout_height="@dimen/circle_button_padding"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -23,8 +23,8 @@
 
     <Button
         android:id="@+id/exponent"
-        android:layout_width="@dimen/circle_button"
-        android:layout_height="@dimen/circle_button"
+        android:layout_width="@dimen/circle_button_padding"
+        android:layout_height="@dimen/circle_button_padding"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -51,8 +51,8 @@
 
     <Button
         android:id="@+id/divide"
-        android:layout_width="@dimen/circle_button"
-        android:layout_height="@dimen/circle_button"
+        android:layout_width="@dimen/circle_button_padding"
+        android:layout_height="@dimen/circle_button_padding"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -66,8 +66,8 @@
 
     <Button
         android:id="@+id/multiply"
-        android:layout_width="@dimen/circle_button"
-        android:layout_height="@dimen/circle_button"
+        android:layout_width="@dimen/circle_button_padding"
+        android:layout_height="@dimen/circle_button_padding"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -81,8 +81,8 @@
 
     <Button
         android:id="@+id/subtract"
-        android:layout_width="@dimen/circle_button"
-        android:layout_height="@dimen/circle_button"
+        android:layout_width="@dimen/circle_button_padding"
+        android:layout_height="@dimen/circle_button_padding"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"
@@ -96,8 +96,8 @@
 
     <Button
         android:id="@+id/add"
-        android:layout_width="@dimen/circle_button"
-        android:layout_height="@dimen/circle_button"
+        android:layout_width="@dimen/circle_button_padding"
+        android:layout_height="@dimen/circle_button_padding"
         android:layout_marginTop="@dimen/button_top_margin"
         android:backgroundTint="@color/md_theme_light_primary"
         android:onClick="defineOperator"

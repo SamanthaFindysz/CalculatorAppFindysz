@@ -75,28 +75,29 @@ public class MainActivity extends AppCompatActivity {
                 //https://www.w3schools.com/java/java_try_catch.asp
                 if(operator.equals("add")){
                     Log.i("sammie", "" + (value1 + value2));
-                    outputTv.setText("" + (value1 + value2));
+                    //Ishaan taught me this rounding trick
+                    outputTv.setText("" + ((double) Math.round((value1 + value2) * 1000))/1000);
                 }
                 else if(operator.equals("subtract")){
-                    outputTv.setText("" + (value1 - value2));
+                    outputTv.setText("" + ((double) Math.round((value1 - value2) * 1000))/1000);
                 }
                 else if(operator.equals("multiply")){
-                    outputTv.setText("" + (value1 * value2));
+                    outputTv.setText("" + ((double) Math.round((value1 * value2) * 1000))/1000);
                 }
                 else if(operator.equals("divide")){
-                    outputTv.setText("" + (value1 / value2));
+                    outputTv.setText("" + ((double) Math.round((value1 / value2) * 1000))/1000);
                 }
                 else if(operator.equals("exponent")){
                     //this raises value 1 to the power of value 2
                     //I found how to do this here:
                     //https://blog.gitnux.com/code/java-exponent/#:~:text=Calculating%20exponents%20in%20Java%20is,to%20the%20power%20of%20b'
-                    outputTv.setText("" + (Math.pow(value1, value2)));
+                    outputTv.setText("" + ((double) Math.round(Math.pow(value1, value2) * 1000))/1000);
                 }
                 else{
                     //this finds the logarithm of value 1 base value 2
                     //I found how to do this here:
                     //https://www.scaler.com/topics/log-in-java/
-                    outputTv.setText("" + ((Math.log(value1) / Math.log(value2))));
+                    outputTv.setText("" + ((double) Math.round(((Math.log(value1) / Math.log(value2)))* 1000))/1000);
                 }
             } catch (Exception e){
                 outputTv.setText("error");
